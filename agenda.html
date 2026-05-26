@@ -18,7 +18,7 @@
   <body class="bg-dark text-light">
     <header>
       <nav
-        class="navbar navbar-expand-lg navbar-dark bg-black sticky-top border-bottom border-secondary"
+        class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top border-bottom border-secondary"
       >
         <div class="container">
           <a class="navbar-brand fw-bold tracking-widest" href="index.html"
@@ -82,9 +82,9 @@
         <h1 class="display-4 fw-bold mt-2 mb-5">Onde Nos Encontramos?</h1>
 
         <div
-          class="table-responsive bg-black p-4 rounded shadow-lg border border-secondary"
+          class="table-responsive p-4 rounded shadow-lg border border-secondary agenda-table-wrapper"
         >
-          <table class="table table-dark table-hover align-middle mb-0">
+          <table class="table table-dark table-hover align-middle mb-0 agenda-table">
             <thead>
               <tr class="text-gold">
                 <th scope="col">Data</th>
@@ -95,13 +95,13 @@
             </thead>
             <tbody>
               <tr>
-                <td class="fw-bold text-white">12 Jun 2026</td>
-                <td>São Paulo - SP</td>
-                <td>Audio Club</td>
+                <td class="fw-bold text-white" data-label="Data">12 Jun 2026</td>
+                <td data-label="Cidade / Estado">São Paulo - SP</td>
+                <td data-label="Local">Audio Club</td>
                 <td class="text-end">
                   <button
                     type="button"
-                    class="btn btn-gold btn-sm rounded-0 px-3"
+                    class="btn btn-gold btn-sm rounded-0 px-3 agenda-buy-btn"
                     data-bs-toggle="modal"
                     data-bs-target="#buyTicketModal"
                   >
@@ -110,13 +110,13 @@
                 </td>
               </tr>
               <tr>
-                <td class="fw-bold text-white">19 Jun 2026</td>
-                <td>Rio de Janeiro - RJ</td>
-                <td>Circo Voador</td>
+                <td class="fw-bold text-white" data-label="Data">19 Jun 2026</td>
+                <td data-label="Cidade / Estado">Rio de Janeiro - RJ</td>
+                <td data-label="Local">Circo Voador</td>
                 <td class="text-end">
                   <button
                     type="button"
-                    class="btn btn-gold btn-sm rounded-0 px-3"
+                    class="btn btn-gold btn-sm rounded-0 px-3 agenda-buy-btn"
                     data-bs-toggle="modal"
                     data-bs-target="#buyTicketModal"
                   >
@@ -125,23 +125,23 @@
                 </td>
               </tr>
               <tr>
-                <td class="fw-bold text-white">05 Jul 2026</td>
-                <td>Belo Horizonte - MG</td>
-                <td>Palácio das Artes</td>
+                <td class="fw-bold text-white" data-label="Data">05 Jul 2026</td>
+                <td data-label="Cidade / Estado">Belo Horizonte - MG</td>
+                <td data-label="Local">Palácio das Artes</td>
                 <td class="text-end">
-                  <span class="badge bg-secondary rounded-0 py-2 px-3"
+                  <span class="badge bg-secondary rounded-0 py-2 px-3 agenda-status-badge"
                     >Esgotado</span
                   >
                 </td>
               </tr>
               <tr>
-                <td class="fw-bold text-white">22 Ago 2026</td>
-                <td>Porto Alegre - RS</td>
-                <td>Opinião Bar</td>
+                <td class="fw-bold text-white" data-label="Data">22 Ago 2026</td>
+                <td data-label="Cidade / Estado">Porto Alegre - RS</td>
+                <td data-label="Local">Opinião Bar</td>
                 <td class="text-end">
                   <button
                     type="button"
-                    class="btn btn-gold btn-sm rounded-0 px-3"
+                    class="btn btn-gold btn-sm rounded-0 px-3 agenda-buy-btn"
                     data-bs-toggle="modal"
                     data-bs-target="#buyTicketModal"
                   >
@@ -166,7 +166,7 @@
         class="modal-dialog modal-dialog-centered modal-lg modal-fullscreen-sm-down"
       >
         <div
-          class="modal-content bg-black text-light border border-secondary shadow-lg"
+          class="modal-content  text-light border border-secondary shadow-lg"
         >
           <div class="modal-header border-bottom border-dark">
             <h5
@@ -202,7 +202,7 @@
                     Turnê Sopro 2026
                   </p>
                   <h4 class="fw-bold">Mariê Ao Vivo</h4>
-                  <p class="text-secondary small">
+                  <p class=" small">
                     Selecione o setor desejado. Os ingressos são nominais e
                     intransferíveis.
                   </p>
@@ -217,7 +217,7 @@
                       >
                       <input
                         type="text"
-                        class="form-control bg-dark text-light border-secondary rounded-0"
+                        class="form-control text-light border-secondary rounded-0"
                         id="buyerName"
                         placeholder="Seu nome"
                         required
@@ -229,7 +229,7 @@
                       >
                       <input
                         type="email"
-                        class="form-control bg-dark text-light border-secondary rounded-0"
+                        class="form-control text-light border-secondary rounded-0"
                         id="buyerEmail"
                         placeholder="seu@exemplo.com"
                         required
@@ -241,7 +241,7 @@
                         >Setor</label
                       >
                       <select
-                        class="form-select bg-dark text-light border-secondary rounded-0"
+                        class="form-select text-light border-secondary rounded-0"
                         id="setorSelect"
                       >
                         <option value="pista">Pista Comum — R$ 80,00</option>
@@ -259,7 +259,7 @@
                       >
                       <input
                         type="number"
-                        class="form-control bg-dark text-light border-secondary rounded-0"
+                        class="form-control text-light border-secondary rounded-0"
                         id="quantity"
                         value="1"
                         min="1"
@@ -272,7 +272,7 @@
                         >Pagamento</label
                       >
                       <select
-                        class="form-select bg-dark text-light border-secondary rounded-0"
+                        class="form-select text-light border-secondary rounded-0"
                         id="paymentMethod"
                       >
                         <option value="card">Cartão</option>
@@ -305,9 +305,9 @@
       </div>
     </div>
 
-    <footer class="bg-black text-center py-4 border-top border-dark">
+    <footer class=" text-center py-4 border-top border-dark">
       <div class="container">
-        <p class="mb-1 text-secondary small">
+        <p class="mb-1  small">
           &copy; 2026 Mariê Música. Todos os direitos reservados.
         </p>
       </div>
